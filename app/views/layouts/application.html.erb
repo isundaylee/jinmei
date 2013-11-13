@@ -1,14 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Jinmei</title>
+  <title>上海尽美长者服务中心<%= @title ? " - #{@title}" : '' %></title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<div class="container">
+  <%= image_tag('logo.png', id: 'logo') %>
+
+  <div id="main">
+    <div id="navbar">
+      <div id="nav-bg-wrapper">
+        <div class="nav-bg" id="nav-bg-1"></div>
+        <div class="nav-bg" id="nav-bg-2"></div>
+        <div class="nav-bg" id="nav-bg-3"></div>
+      </div>
+      <div id="nav-items-wrapper">
+        <table id="nav-items">
+          <tr>
+            <td class="nav-item-cell"><%= link_to '首页 ▾', root_url %></td>
+            <td class="nav-item-cell"><%= link_to '活力58 ▾', '#' %></td>
+            <td class="nav-item-cell"><%= link_to '尽美社区行 ▾', '#' %></td>
+            <td class="nav-item-cell"><%= link_to '海马大讲堂 ▾', '#' %></td>
+            <td class="nav-item-cell"><%= link_to '照护者家园 ▾', '#' %></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div id="content">
+      <%= yield %>
+    </div>
+
+    <div id="joinus">
+      <div id="joinus-bg"></div>
+      <div id="joinus-content">
+        <%= image_tag('joinus-person.png', id: 'joinus-person', alt: '加入我们') %> 
+        <div class="joinus-item f-left" id="joinus-iam">我是 &gt; </div> 
+        <div class="joinus-item f-right"><%= link_to '活力58人', '#' %></div>
+        <div class="joinus-item f-right"><%= link_to '失智照护者', '#' %></div>
+        <div class="joinus-item f-right"><%= link_to '海马志愿者', '#' %></div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="copyright">
+    <p id="copyright-p">Copyright 2013-2014 Jinmei Care</p>
+  </div>
+</div>
 
 </body>
 </html>
