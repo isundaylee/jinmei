@@ -1,3 +1,110 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#static_pages_index {
+  
+  #slides {
+    position: relative; 
+    width: 550px; 
+    height: 450px; 
+    color: black;  
+
+    #slides-bg {
+      position: absolute;
+      top: 0; 
+      left: 0; 
+      width: 550px; 
+      height: 450px; 
+      border-radius: 5px; 
+      overflow: hidden; 
+
+      #slides-bg-lt {
+        position: absolute;
+        top: 0; 
+        left: 0; 
+        background-color: #90cd4a; 
+        width: 550px; 
+        height: 450px; 
+      }
+
+      #slides-bg-rb {
+        position: absolute;
+        left: 100px; 
+        top: 100px; 
+        background-color: #87bd49;
+        width: 450px; 
+        height: 350px; 
+      }
+
+      #slides-bg-rt {
+        position: absolute; 
+        left: 500px; 
+        top: 50px; 
+        border-right: solid #90cd4a 25px;
+        border-top: solid #90cd4a 25px;
+        border-bottom: solid #87bd49 25px;
+        border-left: solid #87bd49 25px;
+      }
+
+      #slides-bg-lb {
+        position: absolute; 
+        left: 50px; 
+        top: 400px; 
+        border-left: solid #90cd4a 25px;
+        border-bottom: solid #90cd4a 25px;
+        border-top: solid #87bd49 25px;
+        border-right: solid #87bd49 25px;
+      }
+    }
+
+    #slides-arrow-l {
+      position: absolute; 
+      left: 0; 
+      top: 0; 
+      width: 40px; 
+      height: 450px; 
+
+      #slides-arrow-l-button {
+        position: absolute;
+        top: 205px; 
+        margin-left: 9px; 
+      }
+    }
+
+    #slides-arrow-r {
+      position: absolute; 
+      left: 500px; 
+      top: 0; 
+      width: 40px; 
+      height: 450px; 
+
+      #slides-arrow-r-button {
+        position: absolute;
+        top: 205px; 
+        margin-left: 15px; 
+      }
+    }
+
+    #slides-view {
+      position: absolute; 
+      left: 50px; 
+      top: 50px; 
+      width: 450px; 
+      height: 350px; 
+      background-color: #a5da68;
+      border-radius: 4px;
+      box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.1);
+
+      #slides-img {
+        width: 420px;
+        height: 320px; 
+        position: absolute; 
+        left: 15px; 
+        top: 15px; 
+        border-radius: 3px;  
+      }
+    }
+  }
+
+}

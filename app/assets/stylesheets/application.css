@@ -23,6 +23,10 @@
   float: right; 
 }
 
+.page_wrapper {
+  width: 1000px; 
+}
+
 
 /* Layout classes
  */

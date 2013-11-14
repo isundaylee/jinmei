@@ -1,2 +1,19 @@
-<h1>StaticPages#index</h1>
-<p>Find me in app/views/static_pages/index.html.erb</p>
+<div id="static_pages_index" class="page_wrapper">
+  <div id="slides">
+    <div id="slides-bg">
+      <div id="slides-bg-lt"></div>
+      <div id="slides-bg-rb"></div>
+      <div id="slides-bg-rt"></div>
+      <div id="slides-bg-lb"></div>
+    </div>
+    <div id="slides-arrow-l">
+      <%= link_to image_tag('arrow-l.png', id: 'slides-arrow-l-button'), '#' %>
+    </div>
+    <div id="slides-view">
+      <%= image_tag('1.jpg', id: 'slides-img') %>
+    </div>
+    <div id="slides-arrow-r">
+      <%= link_to image_tag('arrow-r.png', id: 'slides-arrow-r-button'), '#' %>
+    </div>
+  </div>
+</div>
