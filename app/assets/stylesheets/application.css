@@ -27,6 +27,10 @@
   width: 1000px; 
 }
 
+.hidden {
+  display: none; 
+}
+
 
 /* Layout classes
  */

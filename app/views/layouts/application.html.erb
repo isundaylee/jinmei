@@ -3,10 +3,9 @@
 <head>
   <title>上海尽美长者服务中心<%= @title ? " - #{@title}" : '' %></title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="<%= "#{params[:controller]}_#{params[:action]}" %>">
 
 <div class="container">
   <%= image_tag('logo.png', id: 'logo') %>
@@ -50,6 +49,8 @@
   <div id="copyright">
     <p id="copyright-p">Copyright 2013-2014 Jinmei Care</p>
   </div>
+
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 </div>
 
 </body>
