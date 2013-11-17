@@ -31,6 +31,15 @@
   display: none; 
 }
 
+.center {
+  text-align: center; 
+}
+
+.m-center {
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
 
 /* Layout classes
  */

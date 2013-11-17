@@ -1,5 +1,10 @@
 Jinmei::Application.routes.draw do
+  # Index page routing
   root "static_pages#index"
+
+  # Under construction page routing
+  get "static_pages/under_construction", as: :under_construction
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
