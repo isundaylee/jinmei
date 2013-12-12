@@ -19,3 +19,6 @@
 
 # Ignore RVM config file
 .rvmrc
+
+# Ignores bundler files
+vendor/ruby/
