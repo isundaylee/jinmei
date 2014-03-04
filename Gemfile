@@ -34,6 +34,7 @@ end
 
 group :development do
   gem 'capistrano'
+  gem 'capistrano-ext'
 end
 
 group :development, :test do
