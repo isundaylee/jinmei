@@ -1,2 +1,12 @@
-<h1>CoverImages#new</h1>
-<p>Find me in app/views/cover_images/new.html.erb</p>
+<h1>添加首页图片</h1>
+
+<div>
+  <%= form_for(@image) do |f| %>
+    <div class="file_upload">
+      <span>选择图片</span>
+      <!-- <input type="file" name="image" /> -->
+      <%= f.file_field :image, html: {multipart: true} %>
+    </div>
+    <%= f.submit '添加首页图片' %>
+  <% end %>
+</div>

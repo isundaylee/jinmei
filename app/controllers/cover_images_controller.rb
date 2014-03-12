@@ -4,6 +4,7 @@ class CoverImagesController < ApplicationController
   end
 
   def new
+    @image = CoverImage.new
   end
 
   def destroy
@@ -14,5 +15,14 @@ class CoverImagesController < ApplicationController
   end
 
   def create
+    puts '-'*80
+    puts params
+    file = params[:cover_image][:image]
+    image = CoverImage.new
+    image.image = file
+    image.save
+
+    flash[:success] = "添加首页图片成功"
+    redirect_to cover_images_url
   end
 end
