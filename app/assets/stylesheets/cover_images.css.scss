@@ -1,0 +1,15 @@
+// Place all the styles related to the cover_images controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#cover_images_index_table {
+  width: 780px;
+  margin: 0 auto;
+
+  .cover_images_index_image {
+    width: 230px;
+    margin: 20px;
+    border: 10px solid #a5da68;
+    border-radius: 10px;
+  }
+}

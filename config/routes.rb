@@ -5,6 +5,10 @@ Jinmei::Application.routes.draw do
   # Under construction page routing
   get "static_pages/under_construction", as: :under_construction
 
+  # Cover image resource
+  resources :cover_images, only: [:index, :new, :create, :delete] do
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -45,7 +49,7 @@ Jinmei::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'

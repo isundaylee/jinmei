@@ -1,0 +1,11 @@
+<h1>管理首页图片</h1>
+
+<table id="cover_images_index_table">
+  <% @cover_images.each_with_index do |image, i| %>
+    <%= '<tr>'.html_safe if i % 3 == 0 %>
+    <td>
+      <%= image_tag(image.image.url, class: 'cover_images_index_image') %>
+    </td>
+    <%= '</tr>'.html_safe if i % 3 == 2 %>
+  <% end %>
+</table>
