@@ -3,46 +3,46 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #static_pages_index {
-  
+
   #slides {
-    position: relative; 
-    display: inline-block; 
-    width: 550px; 
-    height: 450px; 
-    color: black;  
-    margin: 0; 
+    position: relative;
+    display: inline-block;
+    width: 550px;
+    height: 450px;
+    color: black;
+    margin: 0;
 
     #slides-bg {
       position: absolute;
-      top: 0; 
-      left: 0; 
-      width: 550px; 
-      height: 450px; 
-      border-radius: 5px; 
-      overflow: hidden; 
+      top: 0;
+      left: 0;
+      width: 550px;
+      height: 450px;
+      border-radius: 5px;
+      overflow: hidden;
 
       #slides-bg-lt {
         position: absolute;
-        top: 0; 
-        left: 0; 
-        background-color: #90cd4a; 
-        width: 550px; 
-        height: 450px; 
+        top: 0;
+        left: 0;
+        background-color: #90cd4a;
+        width: 550px;
+        height: 450px;
       }
 
       #slides-bg-rb {
         position: absolute;
-        left: 100px; 
-        top: 100px; 
+        left: 100px;
+        top: 100px;
         background-color: #87bd49;
-        width: 450px; 
-        height: 350px; 
+        width: 450px;
+        height: 350px;
       }
 
       #slides-bg-rt {
-        position: absolute; 
-        left: 500px; 
-        top: 50px; 
+        position: absolute;
+        left: 500px;
+        top: 50px;
         border-right: solid #90cd4a 25px;
         border-top: solid #90cd4a 25px;
         border-bottom: solid #87bd49 25px;
@@ -50,9 +50,9 @@
       }
 
       #slides-bg-lb {
-        position: absolute; 
-        left: 50px; 
-        top: 400px; 
+        position: absolute;
+        left: 50px;
+        top: 400px;
         border-left: solid #90cd4a 25px;
         border-bottom: solid #90cd4a 25px;
         border-top: solid #87bd49 25px;
@@ -61,179 +61,179 @@
     }
 
     #slides-arrow-l {
-      position: absolute; 
-      left: 0; 
-      top: 0; 
-      width: 40px; 
-      height: 450px; 
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 40px;
+      height: 450px;
 
       #slides-arrow-l-button {
         position: absolute;
-        top: 205px; 
-        margin-left: 9px; 
+        top: 205px;
+        margin-left: 9px;
       }
     }
 
     #slides-arrow-r {
-      position: absolute; 
-      left: 500px; 
-      top: 0; 
-      width: 40px; 
-      height: 450px; 
+      position: absolute;
+      left: 500px;
+      top: 0;
+      width: 40px;
+      height: 450px;
 
       #slides-arrow-r-button {
         position: absolute;
-        top: 205px; 
-        margin-left: 15px; 
+        top: 205px;
+        margin-left: 15px;
       }
     }
 
     #slides-view {
-      position: absolute; 
-      left: 50px; 
-      top: 50px; 
-      width: 450px; 
-      height: 350px; 
+      position: absolute;
+      left: 50px;
+      top: 50px;
+      width: 450px;
+      height: 350px;
       background-color: #a5da68;
       border-radius: 4px;
       box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.1);
 
       #slides-img {
         width: 420px;
-        height: 320px; 
-        position: absolute; 
-        left: 15px; 
-        top: 15px; 
-        border-radius: 3px;  
+        height: 320px;
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        border-radius: 3px;
       }
     }
   }
 
   #learn-more {
     position: relative;
-    width: 424px; 
-    height: 450px; 
-    display: inline-block; 
+    width: 424px;
+    height: 450px;
+    display: inline-block;
     background-color: #f9cc19;
-    margin-left: 26px; 
-    border-radius: 5px; 
-    overflow: hidden; 
+    margin-left: 26px;
+    border-radius: 5px;
+    overflow: hidden;
 
     .learn-more-item {
-      position: absolute; 
-      width: 190px; 
+      position: absolute;
+      width: 190px;
 
       .learn-more-img {
         position: absolute;
-        top: 20px; 
-        left: 17px; 
+        top: 20px;
+        left: 17px;
       }
 
       .learn-more-link {
-        display: block; 
-        text-align: center; 
-        text-decoration: none; 
-        width: 190px; 
-        position: absolute; 
-        top: 195px; 
-        font-size: 18px; 
-        color: white; 
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        width: 190px;
+        position: absolute;
+        top: 195px;
+        font-size: 18px;
+        color: white;
       }
 
       .learn-more-act {
-        position: absolute; 
-        border-radius: 70px; 
-        width: 141px; 
-        height: 141px; 
-        left: 27px; 
-        top: 30px; 
+        position: absolute;
+        border-radius: 70px;
+        width: 141px;
+        height: 141px;
+        left: 27px;
+        top: 30px;
       }
     }
 
     #learn-more-1 {
-      left: 22px;  
-      top: 0; 
+      left: 22px;
+      top: 0;
     }
 
     #learn-more-2 {
       left: 212px;
-      top: 0; 
+      top: 0;
     }
 
 
     #learn-more-3 {
-      left: 22px;  
-      top: 210px; 
+      left: 22px;
+      top: 210px;
     }
 
     #learn-more-4 {
       left: 212px;
-      top: 210px; 
+      top: 210px;
     }
   }
 
   #activities {
-    width: 1000px; 
-    height: 300px; 
+    width: 1000px;
+    height: 300px;
     background-color: #f1840f;
-    margin-top: 25px; 
+    margin-top: 25px;
     overflow: hidden;
-    border-radius: 5px; 
-    position: relative; 
+    border-radius: 5px;
+    position: relative;
 
     .activities-item {
-      width: 200px; 
-      position: absolute; 
-      top: 40px; 
+      width: 200px;
+      position: absolute;
+      top: 40px;
 
       .activities-img {
-        position: absolute; 
-        left: 22px; 
+        position: absolute;
+        left: 22px;
       }
 
       .activities-link, .activities-desc {
-        display: block; 
-        text-align: center; 
-        text-decoration: none; 
-        width: 200px; 
-        position: absolute; 
-        font-size: 18px; 
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        width: 200px;
+        position: absolute;
+        font-size: 18px;
       }
 
       .activities-link {
         top: 180px;
-        color: white;     
+        color: white;
       }
 
       .activities-desc {
-        top: 210px; 
+        top: 210px;
         color: #af5d04;
       }
 
       .activities-act {
-        position: absolute; 
-        border-radius: 70px; 
-        width: 141px; 
-        height: 141px; 
-        left: 32px; 
-        top: 10px; 
+        position: absolute;
+        border-radius: 70px;
+        width: 141px;
+        height: 141px;
+        left: 32px;
+        top: 10px;
       }
     }
 
     #activities-1 {
-      left: 70px; 
+      left: 70px;
     }
 
     #activities-2 {
-      left: 290px; 
+      left: 290px;
     }
 
     #activities-3 {
-      left: 510px; 
+      left: 510px;
     }
 
     #activities-4 {
-      left: 730px; 
+      left: 730px;
     }
   }
 
@@ -243,16 +243,16 @@
 
   #wrapper {
     border-radius: 5px;
-    width: 1000px; 
-    background-color: #a5da68; 
-    padding: 30px 0; 
+    width: 1000px;
+    background-color: #a5da68;
+    padding: 30px 0;
 
     h1 {
-      color: white; 
+      color: white;
     }
 
     p {
-      color: white; 
+      color: white;
     }
   }
 

@@ -6,7 +6,7 @@ Jinmei::Application.routes.draw do
   get "static_pages/under_construction", as: :under_construction
 
   # Cover image resource
-  resources :cover_images, only: [:index, :new, :create, :delete] do
+  resources :cover_images, only: [:index, :new, :create, :destroy] do
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
