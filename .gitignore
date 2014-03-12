@@ -22,3 +22,4 @@
 
 # Ignores bundler files
 vendor/ruby/
+public/uploads/
