@@ -247,7 +247,7 @@ input[type=file] {
 }
 
 input[type=submit] {
-  height: 50px;
+  height: 45px;
   width: 420px;
 }
 
@@ -255,7 +255,7 @@ input[type=submit] {
   position: relative;
   overflow: hidden;
   margin: 10px auto;
-  width: 380px;
+  width: 400px;
   padding-top: 5px;
   height: 25px;
 }
