@@ -16,28 +16,32 @@
  */
 
 .f-left {
-  float: left; 
+  float: left;
 }
 
 .f-right {
-  float: right; 
+  float: right;
 }
 
 .page_wrapper {
-  width: 1000px; 
+  width: 1000px;
 }
 
 .hidden {
-  display: none; 
+  display: none;
+}
+
+.soft-hidden {
+  opacity: 0;
 }
 
 .center {
-  text-align: center; 
+  text-align: center;
 }
 
 .m-center {
-  margin-left: auto; 
-  margin-right: auto; 
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -46,25 +50,25 @@
 
 body {
   font-family: "Microsoft Yahei", Arial, sans-serif;
-  padding: 0; 
-  margin: 0; 
+  padding: 0;
+  margin: 0;
 }
 
 .container {
   /*width: 1000px; */
   margin-left: auto;
-  margin-right: auto; 
+  margin-right: auto;
 }
 
 #logo {
   display: block;
-  margin: 0 auto; 
-  margin-top: 24px; 
+  margin: 0 auto;
+  margin-top: 24px;
 }
 
 #main {
-  position: relative; 
-  top: -5px; 
+  position: relative;
+  top: -5px;
   background-color: #f4f1e6;
 }
 
@@ -74,14 +78,14 @@ body {
   overflow: hidden;
   position: relative;
   top: -26px;
-  width: 1000px; 
-  margin: 0 auto; 
+  width: 1000px;
+  margin: 0 auto;
 }
 
 #navbar .nav-bg {
-  float: left; 
+  float: left;
   height: 52px;
-  display: inline-block; 
+  display: inline-block;
 }
 
 #navbar .nav-bg#nav-bg-1 {
@@ -104,92 +108,145 @@ body {
 }
 
 #navbar #nav-bg-wrapper {
-  font-size: 0; 
-  display: block; 
-  position: absolute; 
-  top: 0; 
-  left: 0; 
+  font-size: 0;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 #navbar #nav-items-wrapper {
-  position: absolute; 
-  top: 0; 
+  position: absolute;
+  top: 0;
   left: 0;
-  z-index: 1; 
+  z-index: 1;
 }
 
 #navbar .nav-item-cell {
-  width: 200px; 
-  font-size: 16px; 
+  width: 200px;
+  font-size: 16px;
   text-align: center;
-  padding-top: 13px; 
+  padding-top: 13px;
   color: white;
 }
 
 #navbar .nav-item-cell a {
   text-decoration: none;
-  color: white; 
+  color: white;
 }
 
 #content {
-  width: 1000px; 
-  margin: 0 auto; 
+  width: 1000px;
+  margin: 0 auto;
+  overflow: auto;
 }
 
 #joinus {
-  width: 1000px; 
-  margin: 0 auto; 
-  height: 70px; 
-  position: relative; 
-  top: 35px; 
+  width: 1000px;
+  margin: 0 auto;
+  height: 70px;
+  position: relative;
+  top: 35px;
 }
 
 #joinus #joinus-bg {
   background-color: #aca692;
-  border-radius: 5px; 
-  width: 1000px; 
+  border-radius: 5px;
+  width: 1000px;
   height: 70px;
   overflow: hidden;
 }
 
 #joinus #joinus-person {
-  float: left; 
-  display: inline; 
-  position: relative; 
-  top: -20px; 
-  margin-left: 50px; 
+  float: left;
+  display: inline;
+  position: relative;
+  top: -20px;
+  margin-left: 50px;
 }
 
 #joinus #joinus-content {
-  position: absolute; 
-  top: 0; 
-  left: 0; 
-  width: 1000px; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1000px;
 }
 
 #joinus .joinus-item {
-  width: 170px; 
-  height: 80px; 
-  font-size: 18px; 
-  color: white; 
-  padding-top: 23px; 
-  text-align: center; 
+  width: 170px;
+  height: 80px;
+  font-size: 18px;
+  color: white;
+  padding-top: 23px;
+  text-align: center;
 }
 
 #joinus .joinus-item a {
   text-decoration: none;
-  color: white; 
+  color: white;
 }
 
 #copyright {
-  margin-top: 60px; 
-  width: 1000px; 
-  margin-left: auto; 
-  margin-right: auto; 
-  color: #888888; 
+  margin-top: 60px;
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #888888;
 }
 
 #copyright-p {
-  text-align: center; 
-  font-size: 16px; 
+  text-align: center;
+  font-size: 16px;
 }
+
+/* Unified layouts
+ */
+
+h1 {
+  text-align: center;
+}
+
+/* Form styles
+ */
+
+form {
+  width: 600px;
+  margin: 0 auto;
+}
+
+input, .file_upload {
+  display: block;
+  font-size: 17px;
+  background-color: #a5da68;
+  border: 10px solid #a5da68;
+  border-radius: 10px;
+  text-align: center;
+}
+
+input {
+  margin: 20px auto;
+  height: 50px;
+  width: 400px;
+}
+
+input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.file_upload {
+  position: relative;
+  overflow: hidden;
+  margin: 10px auto;
+  width: 380px;
+  padding-top: 5px;
+  height: 25px;
+}
+

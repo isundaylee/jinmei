@@ -1,0 +1,27 @@
+<h1>管理首页图片</h1>
+
+<table id="cover_images_index_table">
+  <%
+    @cells = @cover_images
+    @cells << :add
+    @cells << nil while @cells.size % 3 != 0
+  %>
+  <% @cells.each_with_index do |image, i| %>
+    <%= '<tr>'.html_safe if i % 3 == 0 %>
+    <td>
+      <% if image.nil? %>
+        <div class="soft-hidden"></div>
+      <% elsif image == :add %>
+        <div>
+          <%= link_to(image_tag('cover_images_index_add.png', class: 'cover_images_index_add'), new_cover_image_path) %>
+        </div>
+      <% else %>
+        <div>
+          <%= image_tag(image.image.url, class: 'cover_images_index_image') %>
+          <%= link_to(image_tag('cover_images_index_delete.png', class: 'cover_images_index_delete'), cover_image_path(image), method: :delete, confirm: "确定删除图片？") %>
+        </div>
+      <% end %>
+    </td>
+    <%= '</tr>'.html_safe if i % 3 == 2 %>
+  <% end %>
+</table>

@@ -34,6 +34,7 @@ end
 
 group :development do
   gem 'capistrano'
+  gem 'capistrano-ext'
 end
 
 group :development, :test do
@@ -60,3 +61,6 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+# Uploading gem
+gem 'carrierwave'
