@@ -138,6 +138,7 @@ body {
 #content {
   width: 1000px;
   margin: 0 auto;
+  overflow: auto;
 }
 
 #joinus {
@@ -259,3 +260,4 @@ input[type=submit] {
   padding-top: 5px;
   height: 25px;
 }
+
