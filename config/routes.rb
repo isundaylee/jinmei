@@ -1,4 +1,5 @@
 Jinmei::Application.routes.draw do
+
   # Index page routing
   root "static_pages#index"
 
@@ -7,6 +8,10 @@ Jinmei::Application.routes.draw do
 
   # Cover image resource
   resources :cover_images, only: [:index, :new, :create, :destroy] do
+  end
+
+  # Pages routing
+  resources :pages do
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
