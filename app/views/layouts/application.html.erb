@@ -30,9 +30,16 @@
       </div>
     </div>
 
-    <% if flash[:error] %>
+    <% if flash[:error] || flash[:alert]%>
       <div class="flash flash-error">
-        <%= flash[:error] %>
+        <%= (flash[:error] || '') %>
+        <%= (flash[:alert] || '') %>
+      </div>
+    <% end %>
+
+    <% if flash[:notice] %>
+      <div class="flash flash-notice">
+        <%= flash[:notice] %>
       </div>
     <% end %>
 

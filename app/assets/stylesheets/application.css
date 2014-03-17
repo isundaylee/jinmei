@@ -280,3 +280,7 @@ input[type=submit] {
 .flash-success {
   background-color: #90cd4a;
 }
+
+.flash-notice {
+  background-color: #f9cc19;
+}
