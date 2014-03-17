@@ -64,3 +64,6 @@ end
 
 # Uploading gem
 gem 'carrierwave'
+
+# Auth gem
+gem 'devise'

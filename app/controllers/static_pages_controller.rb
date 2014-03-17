@@ -4,4 +4,7 @@ class StaticPagesController < ApplicationController
 
   def under_construction
   end
+
+  def admin_portal
+  end
 end

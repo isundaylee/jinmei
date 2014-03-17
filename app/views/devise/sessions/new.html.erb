@@ -1,0 +1,12 @@
+<h1>登录</h1>
+
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+  <%= f.email_field :email, :autofocus => true, placeholder: '电子邮件地址' %>
+
+  <%= f.password_field :password, placeholder: '密码' %>
+
+  <% if devise_mapping.rememberable? -%>
+  <% end -%>
+
+  <%= f.submit "登录" %>
+<% end %>

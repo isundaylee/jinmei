@@ -181,6 +181,10 @@ body {
   text-align: center;
 }
 
+#joinus #joinus-iam {
+  width: 300px;
+}
+
 #joinus .joinus-item a {
   text-decoration: none;
   color: white;
@@ -221,11 +225,13 @@ input, .file_upload {
   border: 10px solid #a5da68;
   border-radius: 10px;
   text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
 input {
   margin: 20px auto;
-  height: 50px;
+  height: 30px;
   width: 400px;
 }
 
@@ -241,12 +247,61 @@ input[type=file] {
   filter: alpha(opacity=0);
 }
 
+input[type=submit] {
+  height: 45px;
+  width: 420px;
+}
+
 .file_upload {
   position: relative;
   overflow: hidden;
   margin: 10px auto;
-  width: 380px;
+  width: 400px;
   padding-top: 5px;
   height: 25px;
 }
 
+<<<<<<< HEAD
+=======
+/* Flashes
+ */
+
+.flash {
+  width: 960px;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0 auto 20px auto;
+  color: white;
+  text-align: center;
+}
+
+.flash-error {
+  background-color: #f1840f;
+}
+
+.flash-success {
+  background-color: #90cd4a;
+}
+
+.flash-notice {
+  background-color: #f9cc19;
+}
+
+/* Button
+ */
+
+a.button {
+  display: block;
+  width: 400px;
+  height: 25px;
+  padding-top: 5px;
+  background-color: #a5da68;
+  border: 10px solid #a5da68;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 17px;
+  margin: 0 auto;
+  text-decoration: none;
+  color: white;
+}
+>>>>>>> auth

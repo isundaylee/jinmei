@@ -1,10 +1,17 @@
 Jinmei::Application.routes.draw do
+<<<<<<< HEAD
+=======
+  devise_for :users
+>>>>>>> auth
 
   # Index page routing
   root "static_pages#index"
 
   # Under construction page routing
   get "static_pages/under_construction", as: :under_construction
+
+  # Admin portal routing
+  get "static_pages/admin_portal", as: :admin_portal
 
   # Cover image resource
   resources :cover_images, only: [:index, :new, :create, :destroy] do

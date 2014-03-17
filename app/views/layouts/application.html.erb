@@ -30,6 +30,25 @@
       </div>
     </div>
 
+    <% if flash[:error] || flash[:alert]%>
+      <div class="flash flash-error">
+        <%= (flash[:error] || '') %>
+        <%= (flash[:alert] || '') %>
+      </div>
+    <% end %>
+
+    <% if flash[:notice] %>
+      <div class="flash flash-notice">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+
+    <% if flash[:success] %>
+      <div class="flash flash-success">
+        <%= flash[:success] %>
+      </div>
+    <% end %>
+
     <div id="content">
       <%= yield %>
     </div>
@@ -37,15 +56,28 @@
     <div id="joinus">
       <div id="joinus-bg"></div>
       <div id="joinus-content">
-        <%= image_tag('joinus-person.png', id: 'joinus-person', alt: '加入我们') %> 
-        <div class="joinus-item f-left" id="joinus-iam">我是 &gt; </div> 
+        <%= image_tag('joinus-person.png', id: 'joinus-person', alt: '加入我们') %>
+        <div class="joinus-item f-left" id="joinus-iam">
+          欢迎您，
+          <% if user_signed_in? %>
+            <%= current_user.email.split('@')[0] %>
+            (
+              <%= link_to '登出', destroy_user_session_path, method: :delete %>
+              <% if logged_in_as_admin? %>
+                <%= link_to ', 后台', admin_portal_path %>
+              <% end %>
+            )
+          <% else %>
+            游客 ( <%= link_to '注册', new_user_registration_path %> ，<%= link_to '登录', new_user_session_path %> )
+          <% end %>
+        </div>
         <div class="joinus-item f-right"><%= link_to '活力58人', under_construction_url %></div>
         <div class="joinus-item f-right"><%= link_to '失智照护者', under_construction_url %></div>
         <div class="joinus-item f-right"><%= link_to '海马志愿者', under_construction_url %></div>
       </div>
     </div>
   </div>
-  
+
   <div id="copyright">
     <p id="copyright-p">Copyright 2013-2014 Jinmei Care</p>
   </div>
