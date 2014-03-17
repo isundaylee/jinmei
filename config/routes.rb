@@ -1,8 +1,5 @@
 Jinmei::Application.routes.draw do
-<<<<<<< HEAD
-=======
   devise_for :users
->>>>>>> auth
 
   # Index page routing
   root "static_pages#index"
