@@ -1,4 +1,6 @@
 class CoverImagesController < ApplicationController
+  before_action :require_admin
+
   def index
     @cover_images = CoverImage.all
   end

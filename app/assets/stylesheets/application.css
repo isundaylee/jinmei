@@ -261,3 +261,22 @@ input[type=submit] {
   height: 25px;
 }
 
+/* Flashes
+ */
+
+.flash {
+  width: 960px;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 0 auto 20px auto;
+  color: white;
+  text-align: center;
+}
+
+.flash-error {
+  background-color: #f1840f;
+}
+
+.flash-success {
+  background-color: #90cd4a;
+}
