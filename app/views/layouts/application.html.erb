@@ -61,9 +61,14 @@
           欢迎您，
           <% if user_signed_in? %>
             <%= current_user.email.split('@')[0] %>
-            （<%= link_to '登出', destroy_user_session_path, method: :delete %>）
+            (
+              <%= link_to '登出', destroy_user_session_path, method: :delete %>
+              <% if logged_in_as_admin? %>
+                <%= link_to ', 后台', admin_portal_path %>
+              <% end %>
+            )
           <% else %>
-            游客（<%= link_to '注册', new_user_registration_path %>，<%= link_to '登录', new_user_session_path %>）
+            游客 ( <%= link_to '注册', new_user_registration_path %> ，<%= link_to '登录', new_user_session_path %> )
           <% end %>
         </div>
         <div class="joinus-item f-right"><%= link_to '活力58人', under_construction_url %></div>
