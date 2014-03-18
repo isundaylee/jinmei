@@ -33,8 +33,10 @@ group :doc do
 end
 
 group :development do
-  gem 'capistrano'
-  gem 'capistrano-ext'
+  gem 'capistrano', '~> 3.0.1'
+  gem 'capistrano-rvm'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails', '~> 1.1.0'
 end
 
 group :development, :test do
