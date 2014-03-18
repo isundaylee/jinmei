@@ -1,12 +1,12 @@
-<h1>添加首页图片</h1>
+<%= form_for(@image, html: {class: 'flatpack-form'}) do |f| %>
+  <h3>添加首页图片</h3>
 
-<div>
-  <%= form_for(@image) do |f| %>
-    <div class="file_upload">
-      <span>选择图片</span>
-      <!-- <input type="file" name="image" /> -->
-      <%= f.file_field :image, html: {multipart: true} %>
+  <div class="file_upload" id="up_image">
+    <%= f.file_field :image, multipart: true, class: 'file_upload_hidden', id: 'file_upload_image', onchange: "$('#up_image .file_upload_field').val($('#up_image .file_upload_hidden').val())" %>
+    <div id="file_upload_visible">
+      <a class='button file_upload_button'>选择图片</a>
+      <input type="text" class="file_upload_field">
     </div>
-    <%= f.submit '添加首页图片' %>
-  <% end %>
-</div>
+  </div>
+  <%= f.button '添加首页图片' %>
+<% end %>
