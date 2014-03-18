@@ -115,7 +115,6 @@ a.file_upload_button {
 	height: 40px !important;
 	text-align: right !important;
 	-moz-opacity: 0 !important;
-	filter: alpha(opacity:0) !important;
 	z-index: 2 !important;
 	opacity: 0;
 }
