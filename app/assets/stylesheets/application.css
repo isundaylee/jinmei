@@ -210,55 +210,24 @@ h1 {
   text-align: center;
 }
 
-/* Form styles
+/* Forms
  */
 
-form {
-  width: 600px;
-  margin: 0 auto;
-}
-
-input, .file_upload {
-  display: block;
-  font-size: 17px;
-  background-color: #a5da68;
-  border: 10px solid #a5da68;
-  border-radius: 10px;
+#error_explanation {
   text-align: center;
-  padding: 0;
-  margin: 0;
 }
 
-input {
-  margin: 20px auto;
-  height: 30px;
-  width: 400px;
-}
-
-input[type=file] {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 0;
-  padding: 0;
+#error_explanation h2 {
+  color: gray;
   font-size: 20px;
-  cursor: pointer;
-  opacity: 0;
-  filter: alpha(opacity=0);
 }
 
-input[type=submit] {
-  height: 45px;
-  width: 420px;
-}
-
-.file_upload {
-  position: relative;
-  overflow: hidden;
-  margin: 10px auto;
-  width: 400px;
-  padding-top: 5px;
-  height: 25px;
+#error_explanation ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  color: gray;
 }
 
 /* Flashes
