@@ -254,20 +254,3 @@ h1 {
   background-color: #f9cc19;
 }
 
-/* Button
- */
-
-a.button {
-  display: block;
-  width: 400px;
-  height: 25px;
-  padding-top: 5px;
-  background-color: #a5da68;
-  border: 10px solid #a5da68;
-  border-radius: 10px;
-  text-align: center;
-  font-size: 17px;
-  margin: 0 auto;
-  text-decoration: none;
-  color: white;
-}
