@@ -2,6 +2,7 @@ class PagesController < ApplicationController
   before_action :require_admin, only: [:create, :new, :destroy, :edit, :update]
 
   def index
+    @pages = Page.all
   end
 
   def show

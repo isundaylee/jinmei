@@ -1,93 +1,24 @@
 <%= render('sidebar') %>
 
 <div id="pages-index-content">
-  <div class="pages-index-entry">
-    <div class="pages-index-entry-left">
-      <h3>这只是一篇测试文章</h3>
-      <p>别闹了，这篇文章只是用来测试一下的而已。其实也没有什么太大的意义不是吗。别闹了，这篇文章只是用来测试一下的而已。其实也没有什么太大的意义不是吗。别闹了，这篇文章只是用来测试一下的而已。其实也没有什么太大的意义不是吗。别闹了，这篇文章只是用来测试一下的而已。其实也没有什么太大的意义不是吗。</p>
+  <% @pages.each_with_index do |page, i| %>
+    <% if i % 2 == 0 %>
+    <div class="pages-index-entry">
+    <% else %>
+    <div class="pages-index-entry-alt">
+    <% end %>
+      <div class="pages-index-entry-left">
+          <h2><%= page.title %></h2>
+          <p><%= page.summary %></p>
+      </div>
+      <div class="pages-index-entry-right">
+        <div class="pages-index-entry-right-bg-lt"></div>
+        <div class="pages-index-entry-right-bg-rb"></div>
+        <div class="pages-index-entry-right-bg-rt"></div>
+        <div class="pages-index-entry-right-bg-lb"></div>
+        <div class="pages-index-entry-right-bg-wrap"></div>
+        <%= image_tag(CoverImage.first.image.url, class: 'pages-index-entry-right-img') %>
+      </div>
     </div>
-    <div class="pages-index-entry-right">
-      <div class="pages-index-entry-right-bg-lt"></div>
-      <div class="pages-index-entry-right-bg-rb"></div>
-      <div class="pages-index-entry-right-bg-rt"></div>
-      <div class="pages-index-entry-right-bg-lb"></div>
-      <div class="pages-index-entry-right-bg-wrap"></div>
-      <%= image_tag(CoverImage.first.image.url, class: 'pages-index-entry-right-img') %>
-    </div>
-  </div>
-
-  <div class="pages-index-entry-alt">
-    <div class="pages-index-entry-left-alt">
-      <h3>这只是一篇测试文章</h3>
-      <p>别闹了，这篇文章只是用来测试一下的而已。其实也没有什么太大的意义不是吗。别闹了，这篇文章只是用来测试一下的而已。其实也没有什么太大的意义不是吗。别闹了，这篇文章只是用来测试一下的而已。其实也没有什么太大的意义不是吗。别闹了，这篇文章只是用来测试一下的而已。其实也没有什么太大的意义不是吗。</p>
-    </div>
-    <div class="pages-index-entry-right-alt">
-      <div class="pages-index-entry-right-bg-lt-alt"></div>
-      <div class="pages-index-entry-right-bg-rb-alt"></div>
-      <div class="pages-index-entry-right-bg-rt-alt"></div>
-      <div class="pages-index-entry-right-bg-lb-alt"></div>
-      <div class="pages-index-entry-right-bg-wrap-alt"></div>
-      <%= image_tag(CoverImage.first.image.url, class: 'pages-index-entry-right-img-alt') %>
-    </div>
-  </div>
-
-  <div class="pages-index-entry">
-    <div class="pages-index-entry-left">
-      <h3>这只是一篇测试文章</h3>
-      <p>别闹了，这篇文章只是用来测试一下的而已。其实也没有什么太大的意义不是吗。别闹了，这篇文章只是用来测试一下的而已。其实也没有什么太大的意义不是吗。别闹了，这篇文章只是用来测试一下的而已。其实也没有什么太大的意义不是吗。别闹了，这篇文章只是用来测试一下的而已。其实也没有什么太大的意义不是吗。</p>
-    </div>
-    <div class="pages-index-entry-right">
-      <div class="pages-index-entry-right-bg-lt"></div>
-      <div class="pages-index-entry-right-bg-rb"></div>
-      <div class="pages-index-entry-right-bg-rt"></div>
-      <div class="pages-index-entry-right-bg-lb"></div>
-      <div class="pages-index-entry-right-bg-wrap"></div>
-      <%= image_tag(CoverImage.first.image.url, class: 'pages-index-entry-right-img') %>
-    </div>
-  </div>
-
-  <div class="pages-index-entry-alt">
-    <div class="pages-index-entry-left-alt">
-      <h3>这只是一篇测试文章</h3>
-      <p>别闹了，这篇文章只是用来测试一下的而已。其实也没有什么太大的意义不是吗。别闹了，这篇文章只是用来测试一下的而已。其实也没有什么太大的意义不是吗。别闹了，这篇文章只是用来测试一下的而已。其实也没有什么太大的意义不是吗。别闹了，这篇文章只是用来测试一下的而已。其实也没有什么太大的意义不是吗。</p>
-    </div>
-    <div class="pages-index-entry-right-alt">
-      <div class="pages-index-entry-right-bg-lt-alt"></div>
-      <div class="pages-index-entry-right-bg-rb-alt"></div>
-      <div class="pages-index-entry-right-bg-rt-alt"></div>
-      <div class="pages-index-entry-right-bg-lb-alt"></div>
-      <div class="pages-index-entry-right-bg-wrap-alt"></div>
-      <%= image_tag(CoverImage.first.image.url, class: 'pages-index-entry-right-img-alt') %>
-    </div>
-  </div>
-
-  <div class="pages-index-entry">
-    <div class="pages-index-entry-left">
-      <h3>这只是一篇测试文章</h3>
-      <p>别闹了，这篇文章只是用来测试一下的而已。其实也没有什么太大的意义不是吗。别闹了，这篇文章只是用来测试一下的而已。其实也没有什么太大的意义不是吗。别闹了，这篇文章只是用来测试一下的而已。其实也没有什么太大的意义不是吗。别闹了，这篇文章只是用来测试一下的而已。其实也没有什么太大的意义不是吗。</p>
-    </div>
-    <div class="pages-index-entry-right">
-      <div class="pages-index-entry-right-bg-lt"></div>
-      <div class="pages-index-entry-right-bg-rb"></div>
-      <div class="pages-index-entry-right-bg-rt"></div>
-      <div class="pages-index-entry-right-bg-lb"></div>
-      <div class="pages-index-entry-right-bg-wrap"></div>
-      <%= image_tag(CoverImage.first.image.url, class: 'pages-index-entry-right-img') %>
-    </div>
-  </div>
-
-  <div class="pages-index-entry-alt">
-    <div class="pages-index-entry-left-alt">
-      <h3>这只是一篇测试文章</h3>
-      <p>别闹了，这篇文章只是用来测试一下的而已。其实也没有什么太大的意义不是吗。别闹了，这篇文章只是用来测试一下的而已。其实也没有什么太大的意义不是吗。别闹了，这篇文章只是用来测试一下的而已。其实也没有什么太大的意义不是吗。别闹了，这篇文章只是用来测试一下的而已。其实也没有什么太大的意义不是吗。</p>
-    </div>
-    <div class="pages-index-entry-right-alt">
-      <div class="pages-index-entry-right-bg-lt-alt"></div>
-      <div class="pages-index-entry-right-bg-rb-alt"></div>
-      <div class="pages-index-entry-right-bg-rt-alt"></div>
-      <div class="pages-index-entry-right-bg-lb-alt"></div>
-      <div class="pages-index-entry-right-bg-wrap-alt"></div>
-      <%= image_tag(CoverImage.first.image.url, class: 'pages-index-entry-right-img-alt') %>
-    </div>
-  </div>
+  <% end %>
 </div>
