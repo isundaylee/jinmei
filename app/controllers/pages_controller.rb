@@ -7,6 +7,7 @@ class PagesController < ApplicationController
   end
 
   def show
+    @page = Page.find(params[:id])
   end
 
   def create
@@ -14,7 +15,7 @@ class PagesController < ApplicationController
 
     if @page.save
       flash[:success] = '页面创建成功'
-      redirect_to pages_path
+      redirect_to path_path(@page)
     else
       render 'new'
     end
@@ -39,7 +40,7 @@ class PagesController < ApplicationController
 
     if @page.update_attributes(page_params)
       flash[:success] = '页面更新成功'
-      redirect_to pages_path
+      redirect_to page_path(@page)
     else
       render 'edit'
     end

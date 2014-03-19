@@ -13,11 +13,11 @@
         <div class="pages-index-entry-alt">
         <% end %>
           <div class="pages-index-entry-left">
-              <h2><%= page.short_title %></h2>
-              <p><%= page.summary %></p>
+              <h2><%= link_to page.short_title, page_path(page) %></h2>
+              <p><%= link_to page.summary, page_path(page) %></p>
               <% if logged_in_as_admin? %>
-                <%= link_to '删除', page_path(page), method: :delete, confirm: '您真的要删除 "' + page.title + '" 吗？' %>
-                <%= link_to '编辑', edit_page_path(page) %>
+                <%= link_to '删除', page_path(page), method: :delete, confirm: '您真的要删除 "' + page.title + '" 吗？', class: 'action' %>
+                <%= link_to '编辑', edit_page_path(page), class: 'action' %>
               <% end %>
           </div>
           <div class="pages-index-entry-right">
@@ -26,7 +26,7 @@
             <div class="pages-index-entry-right-bg-rt"></div>
             <div class="pages-index-entry-right-bg-lb"></div>
             <div class="pages-index-entry-right-bg-wrap"></div>
-            <%= image_tag(CoverImage.first.image.url, class: 'pages-index-entry-right-img') %>
+            <%= link_to image_tag(CoverImage.first.image.url, class: 'pages-index-entry-right-img'), page_path(page) %>
           </div>
         </div>
       <% end %>

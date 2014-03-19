@@ -30,6 +30,11 @@
 
     a {
       text-decoration: none;
+      color: black;
+    }
+
+    a.action {
+      text-decoration: none;
       color: #f1840f;
     }
 
@@ -205,4 +210,36 @@
 
 #page-form {
   width: 800px;
+}
+
+#pages-show-content-container {
+
+  h1 {
+    font-size: 25px;
+    text-align: left;
+    margin-top: 0;
+    padding-top: 0;
+    margin-left: 10px;
+  }
+
+  #pages-show-content {
+    width: 680px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 30px;
+
+    img {
+      display: block;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 50px;
+      text-decoration: none;
+      color: #f1840f;
+    }
+  }
+
 }
