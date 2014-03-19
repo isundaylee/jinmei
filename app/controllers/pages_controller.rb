@@ -15,7 +15,7 @@ class PagesController < ApplicationController
 
     if @page.save
       flash[:success] = '页面创建成功'
-      redirect_to path_path(@page)
+      redirect_to page_path(@page)
     else
       render 'new'
     end
