@@ -3,7 +3,7 @@ class PagesController < ApplicationController
 
   def index
     @title = '所有文章'
-    @pages = Page.all
+    @pages = Page.all.reverse
   end
 
   def show
@@ -49,7 +49,7 @@ class PagesController < ApplicationController
   def by_category
     category = Category.find(params[:category_id])
     @title = category.title
-    @pages = category.pages
+    @pages = category.pages.reverse
 
     render 'index'
   end
