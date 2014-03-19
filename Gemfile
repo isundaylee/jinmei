@@ -80,3 +80,6 @@ gem 'paperclip'
 gem 'kaminari', github: 'amatsuda/kaminari'
 # requires
 gem 'protected_attributes'
+
+# Decode HTML entities
+gem 'htmlentities'

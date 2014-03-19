@@ -8,10 +8,12 @@ class Page < ActiveRecord::Base
   SHORT_TITLE_LENGTH = 16
 
   def summary
-    if content.length <= SUMMARY_LENGTH
-      content
+    readable = readable_text
+
+    if readable.length <= SUMMARY_LENGTH
+      readable
     else
-      content[0...SUMMARY_LENGTH] + '...'
+      readable[0...SUMMARY_LENGTH] + '...'
     end
   end
 
@@ -22,4 +24,10 @@ class Page < ActiveRecord::Base
       title[0...SHORT_TITLE_LENGTH] + '...'
     end
   end
+
+  private
+
+    def readable_text
+      HTMLEntities.new.decode content.gsub(/<([^>]*?)>/, '')
+    end
 end
