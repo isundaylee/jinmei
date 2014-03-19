@@ -8,8 +8,12 @@
     <div class="pages-index-entry-alt">
     <% end %>
       <div class="pages-index-entry-left">
-          <h2><%= page.title %></h2>
+          <h2><%= page.short_title %></h2>
           <p><%= page.summary %></p>
+          <% if logged_in_as_admin? %>
+            <%= link_to '删除', page_path(page), method: :delete, confirm: '您真的要删除 "' + page.title + '" 吗？' %>
+            <%= link_to '编辑', edit_page_path(page) %>
+          <% end %>
       </div>
       <div class="pages-index-entry-right">
         <div class="pages-index-entry-right-bg-lt"></div>

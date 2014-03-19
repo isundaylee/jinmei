@@ -13,7 +13,7 @@ class PagesController < ApplicationController
 
     if @page.save
       flash[:success] = '页面创建成功'
-      redirect_to root_url
+      redirect_to pages_path
     else
       render 'new'
     end
@@ -24,6 +24,9 @@ class PagesController < ApplicationController
   end
 
   def destroy
+    Page.find(params[:id]).delete
+
+    redirect_to pages_path
   end
 
   def edit
@@ -35,7 +38,7 @@ class PagesController < ApplicationController
 
     if @page.update_attributes(page_params)
       flash[:success] = '页面更新成功'
-      redirect_to root_url
+      redirect_to pages_path
     else
       render 'edit'
     end
