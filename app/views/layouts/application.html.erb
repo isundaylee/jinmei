@@ -22,11 +22,11 @@
       <div id="nav-items-wrapper">
         <table id="nav-items">
           <tr>
-            <td class="nav-item-cell"><%= link_to '首页 ▾', root_url %></td>
-            <td class="nav-item-cell"><%= link_to '活力58 ▾', under_construction_url %></td>
-            <td class="nav-item-cell"><%= link_to '尽美社区行 ▾', under_construction_url %></td>
-            <td class="nav-item-cell"><%= link_to '海马大讲堂 ▾', under_construction_url %></td>
-            <td class="nav-item-cell"><%= link_to '照护者家园 ▾', under_construction_url %></td>
+            <td class="nav-item-cell"><%= link_to '首页 ▾', root_path %></td>
+            <td class="nav-item-cell"><%= link_to '活力58 ▾', under_construction_path %></td>
+            <td class="nav-item-cell"><%= link_to '尽美社区行 ▾', under_construction_path %></td>
+            <td class="nav-item-cell"><%= link_to '海马大讲堂 ▾', under_construction_path %></td>
+            <td class="nav-item-cell"><%= link_to '照护者家园 ▾', under_construction_path %></td>
           </tr>
         </table>
       </div>
@@ -73,9 +73,9 @@
             游客 ( <%= link_to '注册', new_user_registration_path %> ，<%= link_to '登录', new_user_session_path %> )
           <% end %>
         </div>
-        <div class="joinus-item f-right"><%= link_to '活力58人', under_construction_url %></div>
-        <div class="joinus-item f-right"><%= link_to '失智照护者', under_construction_url %></div>
-        <div class="joinus-item f-right"><%= link_to '海马志愿者', under_construction_url %></div>
+        <div class="joinus-item f-right"><%= link_to '活力58人', under_construction_path %></div>
+        <div class="joinus-item f-right"><%= link_to '失智照护者', under_construction_path %></div>
+        <div class="joinus-item f-right"><%= link_to '海马志愿者', under_construction_path %></div>
       </div>
     </div>
   </div>
