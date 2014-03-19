@@ -26,7 +26,9 @@
             <div class="pages-index-entry-right-bg-rt"></div>
             <div class="pages-index-entry-right-bg-lb"></div>
             <div class="pages-index-entry-right-bg-wrap"></div>
-            <%= link_to image_tag(CoverImage.first.image.url, class: 'pages-index-entry-right-img'), page_path(page) %>
+            <% if page.feature_image %>
+              <%= link_to image_tag(page.feature_image, class: 'pages-index-entry-right-img'), page_path(page) %>
+            <% end %>
           </div>
         </div>
       <% end %>

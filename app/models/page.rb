@@ -25,9 +25,22 @@ class Page < ActiveRecord::Base
     end
   end
 
+  def feature_image
+    puts '=' * 80
+    puts (images.empty? ? nil : images[0])
+    puts '=' * 80
+    images.empty? ? nil : images[0]
+  end
+
   private
 
     def readable_text
       HTMLEntities.new.decode content.gsub(/<([^>]*?)>/, '')
+    end
+
+    def images
+      regex = /<img.*?src="(.*?)".*?\/>/
+
+      content.scan(regex).map { |x| x[0] }
     end
 end
