@@ -2,6 +2,7 @@ class PagesController < ApplicationController
   before_action :require_admin, only: [:create, :new, :destroy, :edit, :update]
 
   def index
+    @title = '所有文章'
     @pages = Page.all
   end
 
@@ -45,9 +46,9 @@ class PagesController < ApplicationController
   end
 
   def by_category
-    @pages = Category.find(params[:category_id]).pages
-
-    puts Category.find(params[:category_id]).pages.count
+    category = Category.find(params[:category_id])
+    @title = category.title
+    @pages = category.pages
 
     render 'index'
   end

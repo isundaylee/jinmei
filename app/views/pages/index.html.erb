@@ -1,28 +1,34 @@
 <%= render('sidebar') %>
 
-<div id="pages-index-content">
-  <% @pages.each_with_index do |page, i| %>
-    <% if i % 2 == 0 %>
-    <div class="pages-index-entry">
-    <% else %>
-    <div class="pages-index-entry-alt">
+<div id="pages-index-content-container">
+
+  <h1><%= @title %></h1>
+
+  <div id="pages-index-content">
+    <% @pages.each_with_index do |page, i| %>
+      <% if i % 2 == 0 %>
+      <div class="pages-index-entry">
+      <% else %>
+      <div class="pages-index-entry-alt">
+      <% end %>
+        <div class="pages-index-entry-left">
+            <h2><%= page.short_title %></h2>
+            <p><%= page.summary %></p>
+            <% if logged_in_as_admin? %>
+              <%= link_to '删除', page_path(page), method: :delete, confirm: '您真的要删除 "' + page.title + '" 吗？' %>
+              <%= link_to '编辑', edit_page_path(page) %>
+            <% end %>
+        </div>
+        <div class="pages-index-entry-right">
+          <div class="pages-index-entry-right-bg-lt"></div>
+          <div class="pages-index-entry-right-bg-rb"></div>
+          <div class="pages-index-entry-right-bg-rt"></div>
+          <div class="pages-index-entry-right-bg-lb"></div>
+          <div class="pages-index-entry-right-bg-wrap"></div>
+          <%= image_tag(CoverImage.first.image.url, class: 'pages-index-entry-right-img') %>
+        </div>
+      </div>
     <% end %>
-      <div class="pages-index-entry-left">
-          <h2><%= page.short_title %></h2>
-          <p><%= page.summary %></p>
-          <% if logged_in_as_admin? %>
-            <%= link_to '删除', page_path(page), method: :delete, confirm: '您真的要删除 "' + page.title + '" 吗？' %>
-            <%= link_to '编辑', edit_page_path(page) %>
-          <% end %>
-      </div>
-      <div class="pages-index-entry-right">
-        <div class="pages-index-entry-right-bg-lt"></div>
-        <div class="pages-index-entry-right-bg-rb"></div>
-        <div class="pages-index-entry-right-bg-rt"></div>
-        <div class="pages-index-entry-right-bg-lb"></div>
-        <div class="pages-index-entry-right-bg-wrap"></div>
-        <%= image_tag(CoverImage.first.image.url, class: 'pages-index-entry-right-img') %>
-      </div>
-    </div>
-  <% end %>
+  </div>
+
 </div>

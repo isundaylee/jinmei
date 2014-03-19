@@ -2,185 +2,199 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#pages-index-content {
+#pages-index-content-container {
 
-  h2 {
-    font-size: 20px;
+  float: left;
+
+  h1 {
+    font-size: 25px;
+    text-align: left;
+    margin-top: 0;
+    padding-top: 0;
+    margin-left: 10px;
   }
 
-  p {
-    font-size: 15px;
-  }
+  #pages-index-content {
 
-  a {
-    text-decoration: none;
-    color: #f1840f;
-  }
-
-  .pages-index-entry {
-    width: 740px;
-    background-color: white;
-    border-radius: 5px;
-    overflow: auto;
-
-    .pages-index-entry-left {
-      float: left;
-      width: 365px;
-      height: 200px;
-      padding: 20px 30px;
+    h2 {
+      font-size: 20px;
     }
 
-    .pages-index-entry-right {
-      float: left;
-      width: 315px;
-      height: 240px;
-      background-color: #f9cc19;
-      border-radius: 5px;
-      position: relative;
-      overflow: hidden;
+    p {
+      font-size: 15px;
+    }
 
-      .pages-index-entry-right-bg-lt {
-        position: absolute;
-        top: 0;
-        left: 0;
+    a {
+      text-decoration: none;
+      color: #f1840f;
+    }
+
+    .pages-index-entry {
+      width: 740px;
+      background-color: white;
+      border-radius: 5px;
+      overflow: auto;
+
+      .pages-index-entry-left {
+        float: left;
+        width: 365px;
+        height: 200px;
+        padding: 20px 30px;
+      }
+
+      .pages-index-entry-right {
+        float: left;
+        width: 315px;
+        height: 240px;
         background-color: #f9cc19;
-        width: 315px;
-        height: 240px;
-      }
-
-      .pages-index-entry-right-bg-rb {
-        position: absolute;
-        left: 60px;
-        top: 60px;
-        background-color: #ecc145;
-        width: 255px;
-        height: 180px;
-      }
-
-      .pages-index-entry-right-bg-rt {
-        position: absolute;
-        left: 285px;
-        top: 30px;
-        border-right: solid #f9cc19 15px;
-        border-top: solid #f9cc19 15px;
-        border-bottom: solid #ecc145 15px;
-        border-left: solid #ecc145 15px;
-      }
-
-      .pages-index-entry-right-bg-lb {
-        position: absolute;
-        left: 30px;
-        top: 210px;
-        border-right: solid #ecc145 15px;
-        border-top: solid #ecc145 15px;
-        border-bottom: solid #f9cc19 15px;
-        border-left: solid #f9cc19 15px;
-      }
-
-      .pages-index-entry-right-img {
-        position: absolute;
-        left: 40px;
-        top: 40px;
-        width: 235px;
-        height: 160px;
         border-radius: 5px;
+        position: relative;
+        overflow: hidden;
+
+        .pages-index-entry-right-bg-lt {
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: #f9cc19;
+          width: 315px;
+          height: 240px;
+        }
+
+        .pages-index-entry-right-bg-rb {
+          position: absolute;
+          left: 60px;
+          top: 60px;
+          background-color: #ecc145;
+          width: 255px;
+          height: 180px;
+        }
+
+        .pages-index-entry-right-bg-rt {
+          position: absolute;
+          left: 285px;
+          top: 30px;
+          border-right: solid #f9cc19 15px;
+          border-top: solid #f9cc19 15px;
+          border-bottom: solid #ecc145 15px;
+          border-left: solid #ecc145 15px;
+        }
+
+        .pages-index-entry-right-bg-lb {
+          position: absolute;
+          left: 30px;
+          top: 210px;
+          border-right: solid #ecc145 15px;
+          border-top: solid #ecc145 15px;
+          border-bottom: solid #f9cc19 15px;
+          border-left: solid #f9cc19 15px;
+        }
+
+        .pages-index-entry-right-img {
+          position: absolute;
+          left: 40px;
+          top: 40px;
+          width: 235px;
+          height: 160px;
+          border-radius: 5px;
+        }
+
+        .pages-index-entry-right-bg-wrap {
+          position: absolute;
+          left: 30px;
+          top: 30px;
+          width: 255px;
+          height: 180px;
+          background-color: #fbd95a;
+          border-radius: 5px;
+        }
       }
 
-      .pages-index-entry-right-bg-wrap {
-        position: absolute;
-        left: 30px;
-        top: 30px;
-        width: 255px;
-        height: 180px;
-        background-color: #fbd95a;
-        border-radius: 5px;
-      }
+
     }
 
-
-  }
-
-  .pages-index-entry-alt {
-    width: 740px;
-    background-color: white;
-    border-radius: 5px;
-    overflow: auto;
-    margin: 20px 0;
-
-    .pages-index-entry-left {
-      float: right;
-      width: 365px;
-      height: 200px;
-      padding: 20px 30px;
-    }
-
-    .pages-index-entry-right {
-      float: right;
-      width: 315px;
-      height: 240px;
-      background-color: #90cd4a;
+    .pages-index-entry-alt {
+      width: 740px;
+      background-color: white;
       border-radius: 5px;
-      position: relative;
-      overflow: hidden;
+      overflow: auto;
+      margin: 20px 0;
 
-      .pages-index-entry-right-bg-lt {
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: #90cd4a;
+      .pages-index-entry-left {
+        float: right;
+        width: 365px;
+        height: 200px;
+        padding: 20px 30px;
+      }
+
+      .pages-index-entry-right {
+        float: right;
         width: 315px;
         height: 240px;
-      }
-
-      .pages-index-entry-right-bg-rb {
-        position: absolute;
-        left: 60px;
-        top: 60px;
-        background-color: #87bd49;
-        width: 255px;
-        height: 180px;
-      }
-
-      .pages-index-entry-right-bg-rt {
-        position: absolute;
-        left: 285px;
-        top: 30px;
-        border-right: solid #90cd4a 15px;
-        border-top: solid #90cd4a 15px;
-        border-bottom: solid #87bd49 15px;
-        border-left: solid #87bd49 15px;
-      }
-
-      .pages-index-entry-right-bg-lb {
-        position: absolute;
-        left: 30px;
-        top: 210px;
-        border-right: solid #87bd49 15px;
-        border-top: solid #87bd49 15px;
-        border-bottom: solid #90cd4a 15px;
-        border-left: solid #90cd4a 15px;
-      }
-
-      .pages-index-entry-right-img {
-        position: absolute;
-        left: 40px;
-        top: 40px;
-        width: 235px;
-        height: 160px;
+        background-color: #90cd4a;
         border-radius: 5px;
+        position: relative;
+        overflow: hidden;
+
+        .pages-index-entry-right-bg-lt {
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: #90cd4a;
+          width: 315px;
+          height: 240px;
+        }
+
+        .pages-index-entry-right-bg-rb {
+          position: absolute;
+          left: 60px;
+          top: 60px;
+          background-color: #87bd49;
+          width: 255px;
+          height: 180px;
+        }
+
+        .pages-index-entry-right-bg-rt {
+          position: absolute;
+          left: 285px;
+          top: 30px;
+          border-right: solid #90cd4a 15px;
+          border-top: solid #90cd4a 15px;
+          border-bottom: solid #87bd49 15px;
+          border-left: solid #87bd49 15px;
+        }
+
+        .pages-index-entry-right-bg-lb {
+          position: absolute;
+          left: 30px;
+          top: 210px;
+          border-right: solid #87bd49 15px;
+          border-top: solid #87bd49 15px;
+          border-bottom: solid #90cd4a 15px;
+          border-left: solid #90cd4a 15px;
+        }
+
+        .pages-index-entry-right-img {
+          position: absolute;
+          left: 40px;
+          top: 40px;
+          width: 235px;
+          height: 160px;
+          border-radius: 5px;
+        }
+
+        .pages-index-entry-right-bg-wrap {
+          position: absolute;
+          left: 30px;
+          top: 30px;
+          width: 255px;
+          height: 180px;
+          background-color: #a5da68;
+          border-radius: 5px;
+        }
       }
 
-      .pages-index-entry-right-bg-wrap {
-        position: absolute;
-        left: 30px;
-        top: 30px;
-        width: 255px;
-        height: 180px;
-        background-color: #a5da68;
-        border-radius: 5px;
-      }
+
     }
-
-
   }
+
 }
