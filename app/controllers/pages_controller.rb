@@ -44,6 +44,14 @@ class PagesController < ApplicationController
     end
   end
 
+  def by_category
+    @pages = Category.find(params[:category_id]).pages
+
+    puts Category.find(params[:category_id]).pages.count
+
+    render 'index'
+  end
+
   private
 
     def page_params

@@ -16,6 +16,9 @@ Jinmei::Application.routes.draw do
 
   # Pages routing
   resources :pages do
+    collection do
+      get 'by_category/:category_id', action: 'by_category', as: 'by_category'
+    end
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
