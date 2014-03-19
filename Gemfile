@@ -70,3 +70,7 @@ gem 'carrierwave'
 
 # Auth gem
 gem 'devise'
+
+# Formtastic
+
+gem 'formtastic'
