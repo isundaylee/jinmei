@@ -10,8 +10,6 @@ class PagesController < ApplicationController
   def create
     @page = Page.new(page_params)
 
-    puts page_params
-
     if @page.save
       flash[:success] = '页面创建成功'
       redirect_to root_url
@@ -32,6 +30,14 @@ class PagesController < ApplicationController
   end
 
   def update
+    @page = Page.find(params[:id])
+
+    if @page.update_attributes(page_params)
+      flash[:success] = '页面更新成功'
+      redirect_to root_url
+    else
+      render 'edit'
+    end
   end
 
   private
