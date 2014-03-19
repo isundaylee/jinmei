@@ -1,0 +1,12 @@
+<%= semantic_form_for @page, html: {class: 'flatpack-form'} do |f| %>
+
+  <h3><%= title %></h3>
+
+  <%= f.inputs do %>
+    <%= f.input :categories, label: '页面分类' %>
+    <%= f.input :title, label: '标题' %>
+    <%= f.input :content, label: '内容' %>
+    <%= f.button "#{submit}" %>
+  <% end %>
+
+<% end %>

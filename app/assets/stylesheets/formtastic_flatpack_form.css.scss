@@ -1,0 +1,23 @@
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  ol {
+    margin: 0;
+    padding: 0;
+
+    li.input {
+      overflow: auto;
+      margin-top: 20px;
+
+      label {
+        margin-left: 10%;
+      }
+
+      input, select {
+        margin-top: 10px;
+      }
+    }
+  }
+}
