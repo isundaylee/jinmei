@@ -31,5 +31,7 @@ module Jinmei
 
       g.fixture_replacement :factory_girl, dir: 'spec/factories'
     end
+
+    config.active_record.whitelist_attributes = false
   end
 end

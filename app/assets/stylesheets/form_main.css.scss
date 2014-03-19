@@ -28,7 +28,6 @@
     }
     /* === Input Elements === */
     input, select {
-        width: 78%;
         float: left;
         border-radius: 5px;
         -moz-border-radius: 5px;
@@ -43,8 +42,19 @@
         background-color: #f5f7f6;
     }
 
+    #cke_page_content {
+      margin: 0 auto;
+      width: 78%;
+      margin-top: 10px;
+    }
+
     input {
         height: 40px;
+        width: 78%;
+    }
+
+    select {
+        width: 80%;
     }
 
     .file_upload {

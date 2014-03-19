@@ -72,5 +72,11 @@ gem 'carrierwave'
 gem 'devise'
 
 # Formtastic
-
 gem 'formtastic'
+
+# Rich text editor
+gem 'rich', github: 'bastiaanterhorst/rich'
+gem 'paperclip'
+gem 'kaminari', github: 'amatsuda/kaminari'
+# requires
+gem 'protected_attributes'
