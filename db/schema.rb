@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140323204905) do
+ActiveRecord::Schema.define(version: 20140410041211) do
 
   create_table "categories", force: true do |t|
     t.string   "title"
@@ -28,7 +28,10 @@ ActiveRecord::Schema.define(version: 20140323204905) do
     t.string   "image"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "page_id"
   end
+
+  add_index "cover_images", ["page_id"], name: "index_cover_images_on_page_id"
 
   create_table "pages", force: true do |t|
     t.string   "title"

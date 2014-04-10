@@ -3,6 +3,9 @@ class Page < ActiveRecord::Base
 
   has_and_belongs_to_many :categories
   belongs_to :author, class_name: 'User', foreign_key: 'author_id', validate: true
+  has_many :cover_images
+
+  before_destroy :clean_cover_image_links
 
   SUMMARY_LENGTH = 140
   SHORT_TITLE_LENGTH = 16
@@ -42,5 +45,12 @@ class Page < ActiveRecord::Base
       regex = /<img.*?src="(.*?)".*?\/>/
 
       content.scan(regex).map { |x| x[0] }
+    end
+
+    def clean_cover_image_links
+      cover_images.each do |i|
+        i.page = nil
+        i.save
+      end
     end
 end

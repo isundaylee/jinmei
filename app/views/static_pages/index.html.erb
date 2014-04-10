@@ -11,7 +11,13 @@
     </div>
     <div id="slides-view">
       <% CoverImage.all.each_with_index do |image, i| %>
+        <% if image.page %>
+          <a href="<%= page_path(image.page) %>">
+        <% end %>
         <%= image_tag(image.image.url, id: 'slides-img', class: (i == 0 ? '' : 'hidden')) %>
+        <% if image.page %>
+          </a>
+        <% end %>
       <% end %>
     </div>
     <div id="slides-arrow-r">
