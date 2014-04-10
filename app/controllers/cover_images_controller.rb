@@ -17,11 +17,10 @@ class CoverImagesController < ApplicationController
   end
 
   def create
-    puts '-'*80
-    puts params
     file = params[:cover_image][:image]
     image = CoverImage.new
     image.image = file
+    image.page = Page.find(params[:cover_image][:page_id])
     image.save
 
     flash[:success] = "添加首页图片成功"

@@ -8,5 +8,8 @@
       <input type="text" class="file_upload_field">
     </div>
   </div>
+
+  <%= f.collection_select :page_id, Page.all, :id, :title %>
+
   <%= f.button '添加首页图片' %>
 <% end %>
